@@ -5,7 +5,7 @@ fence_npc = fence_npc or {}
 fence_npc.models = {"models/humans/Group03/male_02.mdl"}
 
 -- Range at which the NPC will detect items. Keep this low to prevent abuse. (e.g. selling other players' objects through walls without stealing them)
-fence_npc.range = 80
+fence_npc.range = 120
 
 -- Sounds the NPC will randomly play when you +use it, but you do not belong to the whitelisted teams below.
 fence_npc.reject_sounds = {"scenes/npc/male01/gethellout.vcd", "scenes/npc/male01/answer17.vcd"}
@@ -21,20 +21,18 @@ fence_npc.purchase_sounds = {"scenes/npc/male01/fantastic01.vcd", "scenes/npc/ma
 
 -- List of teams that are allowed to talk to the NPC.
 fence_npc.teams = {} -- Base table, ignore.
-fence_npc.teams[TEAM_GANG] = true
-fence_npc.teams[TEAM_MOB] = true
-fence_npc.teams[TEAM_THIEF] = true
+fence_npc.teams[TEAM_LADRON] = true
 
 -- The text in the menu. Only the first three do anything.
 fence_npc.message = {
-	"Hey there, kid. Need to get some items",		--Menu text
-	"off your hands, quick? I'll take em for ya.",	--Menu text
-	"Don't expect exceptional offers, though.",		--Menu text
-	"Stolen Item Fence",							--Menu Window Title
-	"Take these.",									--Menu Accept Button
-	"Get out of here...",							--Reject - Invalid Job
-	"Bring me stuff to sell...",					--Reject - Nothing to sell
-	"Total Offer"									--Total offer text
+	"Hey tu, si tienes cosas que necesitas sacarte",--Menu text
+	"de tus manos rapido, traemelas y te ofrecere",	--Menu text
+	"dinero por ello. No esperes buenas ofertas...",--Menu text
+	"Mercado Negro",								--Menu Window Title
+	"Vender",										--Menu Accept Button
+	"Tomatela de aca....",							--Reject - Invalid Job
+	"Traeme cosas que quieras vender...",			--Reject - Nothing to sell
+	"Oferta total"									--Total offer text
 }
 
 -- Display customization
